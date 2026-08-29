@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Neyroxarakter özünüqiymətləndirmə testi — 20 sual, 4 sahə, ani nəticə.">
+  <title>Neyroxarakter Testi — Ruslan Dosmammadov</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./tests.css">
+</head>
+<body class="quiz-page">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav quiz-nav" id="navbar">
+    <a class="brand" href="./index.html"><span class="brand-mark">T</span>TALANTO</a>
+    <nav class="nav-links">
+      <a href="./index.html">Ana səhifə</a>
+      <a href="./tests.html" class="active-link">Testlər</a>
+      <a href="./index.html#elaqe">Əlaqə</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="./tests.html"><i class="fa-solid fa-arrow-left"></i> Testlər</a>
+      <button class="menu-btn" aria-label="Menyu aç" id="menuBtn"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="./index.html" class="mob-link">Ana səhifə</a>
+    <a href="./tests.html" class="mob-link">Testlər</a>
+    <a href="./index.html#elaqe" class="mob-link">Əlaqə</a>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <main class="quiz-main">
+    <div class="quiz-shell" id="quizApp">
+      <section class="quiz-intro" id="quizIntro">
+        <a href="./tests.html" class="quiz-back"><i class="fa-solid fa-arrow-left"></i> Bütün testlər</a>
+        <div class="quiz-intro-icon"><i class="fa-solid fa-brain"></i></div>
+        <span class="test-kicker">20 sual · 4 sahə · təxminən 5 dəqiqə</span>
+        <h1>Neyroxarakter Testi</h1>
+        <p>Sosial münasibətlər, iqtisadi davranış, analitik düşüncə və bildiklərinizi tətbiq etmə sahələrində özünüzü necə qiymətləndirdiyinizi görmək üçün hazırlanmış qısa test.</p>
+        <div class="quiz-intro-grid">
+          <div><i class="fa-solid fa-users"></i><span>Sosial</span></div>
+          <div><i class="fa-solid fa-coins"></i><span>İqtisadi</span></div>
+          <div><i class="fa-solid fa-flask"></i><span>Analitik</span></div>
+          <div><i class="fa-solid fa-bolt"></i><span>Tətbiq</span></div>
+        </div>
+        <div class="quiz-disclaimer"><i class="fa-solid fa-circle-info"></i><span>Bu test özünüqiymətləndirmə və məlumatlandırma məqsədi daşıyır; psixoloji diaqnoz deyil.</span></div>
+        <button class="quiz-primary" id="startQuizBtn">Testə başla <i class="fa-solid fa-arrow-right"></i></button>
+      </section>
+
+      <section class="quiz-stage" id="quizStage" hidden>
+        <div class="quiz-stage-head">
+          <div>
+            <span class="quiz-counter" id="progressText">Sual 1 / 20</span>
+            <span class="quiz-domain" id="domainText">Sosial sahə</span>
+          </div>
+          <span class="quiz-percent" id="progressPercent">5%</span>
+        </div>
+        <div class="quiz-progress"><div id="progressFill"></div></div>
+        <div class="question-card">
+          <h2 id="questionText">Sual yüklənir...</h2>
+          <div class="answer-scale"><span>Uyğun deyil</span><span>Tam uyğundur</span></div>
+          <div class="options-grid" id="optionsContainer"></div>
+        </div>
+        <div class="quiz-actions">
+          <button class="quiz-secondary" id="prevBtn" type="button"><i class="fa-solid fa-arrow-left"></i> Əvvəlki</button>
+          <button class="quiz-primary" id="nextBtn" type="button" disabled>Növbəti <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <section class="quiz-results" id="quizResults" hidden aria-live="polite"></section>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+  <script src="./neurotest.js"></script>
+</body>
+</html>
